@@ -62,36 +62,38 @@ body {
 }
 
 .main-content__text p:first-child {
-    margin-bottom: 5px;
+    margin-bottom: 15px;
 }
 
 .main-assistant {
     position: relative;
-    overflow: hidden;
-
 
     width: 289.4px;
     height: 786.79px;
     margin-left: 16.04px;
-
-    /* background: rgb(255, 0, 0, 0.2); */
-    /* background: url(./image/Assistant.png) no-repeat center; */
 }
 
 .main-assistant__robot {
-    position: absolute;
+    width: 289.4px;
+    height: 756.22px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.main-assistant__robot-img {
 
     animation-duration: 5s;
     animation-name: appearance;
 
     width: 289.4px;
-    height: 786.79px;
-    /* z-index: 1; */
+    height: 756.22px;
+
     background: url(./image/Assistant.png) no-repeat center;
 }
 
 @keyframes appearance {
-    from {
+    /* from {
       margin-top: 400%;
       width: 100%;
     }
@@ -99,14 +101,22 @@ body {
     to {
       margin-top: 0%;
       width: 100%;
-    }
+    } */
+
+    from {
+        transform: translateY(100%);
+      }
+      to {
+          transform: translateY(0);
+      }
   }
 
 .main-assistant__hole {
     position: absolute;
 
-    animation-duration: 5s;
-    animation-name: hole;
+    /* animation-duration: 5s;
+    animation-name: hole; */
+    animation: hole 5s ease-in-out;
 
     width: 193.78px;
     height: 61.14px;
@@ -119,14 +129,10 @@ body {
 }
 
 @keyframes hole {
-    /* 0% { transform: scale(0); }
-    25% { transform: scale(1); }
-    50% { transform: scale(1); }
-    25% { transform: scale(1); }
-    0% { transform: scale(0); } */
-
-    0% { transform: scale(0.5); }
-    50% { transform: scale(1); }
-    100% { transform: scale(0.9); }
     
+    0% { transform: scale(0.5); }
+    25% { transform: scale(1); }
+    75% { transform: scale(1); }
+    100% { transform: scale(0.9); }
+        
    }
