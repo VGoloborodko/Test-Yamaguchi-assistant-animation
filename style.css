@@ -92,52 +92,55 @@
         position: relative;
         overflow: hidden;
     }
+
+    .main-assistant__robot-img.levitation {
+        animation: levitation 2s ease-in-out infinite;
+        animation-direction: alternate;
+        transform: translateY(-8px);
+    }
     
     .main-assistant__robot-img {
     
-        animation-duration: 5s;
-        animation-name: appearance;
+        transform: translateY(100%);
+        animation: appearance 2s ease-in-out;
+        animation-delay: 1s;
     
         width: 289.4px;
         height: 756.22px;
     
         background: url(./image/Assistant.png) no-repeat center;
     }
-    
-    @keyframes appearance {
-        /* from {
-          margin-top: 400%;
-          width: 100%;
-        }
-      
-        to {
-          margin-top: 0%;
-          width: 100%;
-        } */
-    
-        from {
-            transform: translateY(100%);
-          }
-          to {
-              transform: translateY(0);
-        }
+
+    .shadow {
+        position: absolute;
+        width: 173.78px;
+        margin-left: 10px;
+        left: calc((289.4px - 193.78px) / 2);
+        height: 15px;
+        background: linear-gradient(0deg, #000000, #000000, transparent);
+        bottom: 0;
+        animation: hole 7s ease-in-out;
     }
     
-    /* .levitate {
-        animation: appearance 20s ease-in-out infinite;
-        animation: appearance 5.5s alternate ease-in-out infinite;
-      } */
+    @keyframes appearance {
+        to {
+            transform: translateY(-8px);
+        }
+    }
+    @keyframes levitation {
+        to {
+            transform: translateY(0);
+        }
+    }
     
     .main-assistant__hole {
         position: absolute;
     
-        /* animation-duration: 5s;
-        animation-name: hole; */
-        animation: hole 5s ease-in-out;
+        animation: hole 7s ease-in-out;
     
-        width: 193.78px;
-        height: 61.14px;
-        top: 725.79px;
+        width: 193px;
+        height: 60px;
+        bottom: 0;
         left: calc((289.4px - 193.78px) / 2);
     
         border-radius: 50%;
@@ -146,12 +149,10 @@
     }
     
     @keyframes hole {
-    
-        0% { transform: scale(0.5); }
-        25% { transform: scale(1); }
-        75% { transform: scale(1); }
-        100% { transform: scale(0.9); }
-            
+        0% { transform: scale(0.8); }
+        25% { transform: scale(1.6); }
+        75% { transform: scale(1.6); }
+        100% { transform: scale(1); }
     }
     
     .main-interface {
@@ -363,56 +364,59 @@
         position: relative;
         overflow: hidden;
     }
+
+    .main-assistant__robot-img.levitation {
+        animation: levitation 5s ease-in-out infinite;
+        animation-direction: alternate;
+        transform: translateY(-30px);
+    }
     
     .main-assistant__robot-img {
-    
-        animation-duration: 5s;
-        animation-name: appearance;
-    
+        transform: translateY(100%);
+        animation: appearance 5s ease-in-out;
+        animation-delay: 1s;
         width: 435px;
-        height: 821.78px;
-    
+        height: 821px;
         background: url(./image/Assistant\ desktop.png) no-repeat center;
     }
-    
+
+    .shadow {
+        position: absolute;
+        width: 160px;
+        left: calc(50% - 80px);
+        height: 15px;
+        background: linear-gradient(0deg, #000000, #000000, transparent);
+        bottom: 0;
+        animation: hole 7s ease-in-out;
+    }
+
     @keyframes appearance {
-        from {
-            transform: translateY(100%);
-          }
-          to {
-              transform: translateY(0);
+        to {
+            transform: translateY(-30px);
         }
     }
-    
-    /* .levitate {
-        animation: appearance 20s ease-in-out infinite;
-        animation: appearance 5.5s alternate ease-in-out infinite;
-      } */
-    
+    @keyframes levitation {
+        to {
+            transform: translateY(0);
+        }
+    }
+
     .main-assistant__hole {
         position: absolute;
-    
-        /* animation-duration: 5s;
-        animation-name: hole; */
-        animation: hole 5s ease-in-out;
-    
-        width: 193.78px;
-        height: 61.14px;
-        top: 790.79px;
-        left: calc((435px - 193.78px) / 2);
-    
+        animation: hole 7s ease-in-out;
+        width: 193px;
+        height: 60px;
+        bottom: 0;
+        left: calc((435px - 193px) / 2);
         border-radius: 50%;
-    
         background: #000000;
     }
     
     @keyframes hole {
-    
-        0% { transform: scale(0.5); }
-        25% { transform: scale(1); }
-        75% { transform: scale(1); }
-        100% { transform: scale(0.9); }
-            
+        0% { transform: scale(0.8); }
+        25% { transform: scale(1.6); }
+        75% { transform: scale(1.6); }
+        100% { transform: scale(1); }
     }
     
     .main-interface {
